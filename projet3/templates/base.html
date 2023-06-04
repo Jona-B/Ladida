@@ -1,0 +1,67 @@
+{# Fichier templates/base.html #}
+<!doctype html>
+<html lang="fr">
+    <head>
+        <title>LaDiDa : Share your creativity</title>
+        <meta charset="utf-8">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='stylePC.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='stylePhoneTablette.css') }}">
+    </head>
+    <body>
+        <div id="topPage">
+        <header>
+        <a href="{{ url_for('affiche_accueil') }}"><img src="{{ url_for('static', filename='logo.png') }}" alt='logo' id="logo" /></a>
+       <br>
+       <nav>
+        <a href="{{ url_for('affiche_accueil') }}" class="accueilHeader">Accueil </a>
+        <a href="{{ url_for('affiche_galerie') }}" class="galerieHeader">Galerie </a>
+        
+        {% if 'pseudonyme' in session %}
+        
+        <span class="profil">
+        
+       Bienvenue <a href="{{ url_for('affiche_image_createur' , createur=session['pseudonyme']) }}" class="pseudoHeader">{{ session['pseudonyme'].capitalize() }}</a>
+       <a href="/formulaire" class="shareImage">Publier </a> <br>
+        <a href="/deconnexion" class="authentificationStyle">Déconnexion</a>
+        
+       </span>
+  
+{% else %}
+<span class="authentification">
+        <a href="/connexion" class="connexion">Se connecter </a>
+        <a href="/inscription" class="inscription">S'inscrire</a>
+</span>
+</nav>
+    </header>
+{% endif %}
+</div>
+        {% block contenu %}
+        {% endblock %}
+        <div id="botPage">
+            <footer>
+            
+            
+            {% if 'pseudonyme' in session %}
+            <a href="/formulaire" class="shareImage">Publier </a> <br>
+            <br>
+            <nav>
+            <a href="{{ url_for('affiche_accueil') }}" class="accueilHeader">Accueil </a>
+         <a href="{{ url_for('affiche_galerie') }}" class="galerieHeader">Galerie </a>
+         <br>
+        <span class="profil">
+           Bienvenue <a href="{{ url_for('affiche_image_createur' , createur=session['pseudonyme']) }}" class="pseudoHeader">{{ session['pseudonyme'].capitalize() }}</a>
+           <br>
+            <a href="/deconnexion" class="authentificationStyle">Déconnexion</a>
+           </span>
+    {% else %}
+    <span class="authentification">
+            <a href="/connexion" class="connexion">Se connecter </a>
+            <a href="/inscription" class="inscription">S'inscrire</a>
+        </span>
+    </nav>
+    </footer>
+    {% endif %}
+    </div>
+    </body>
+</html>

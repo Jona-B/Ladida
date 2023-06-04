@@ -1,0 +1,17 @@
+{# Fichier templates/formulaire_envoi_image.html #}
+{% extends "base.html" %}
+{% block contenu %}
+    <form action="{{ url_for('envoie_image') }}" method="POST" enctype="multipart/form-data">
+        <p>
+            <input type="hidden" name="createur" id="createur" value="{{ session['pseudonyme'] }}">
+        </p>
+        <p>
+            <input type="file" id="fichier" name="fichier_utilisateur" required>
+        </p>
+       
+           <p>
+            <input type="submit" value="Publier" id="boutonEnvoyer">
+           <p> *Formats compatibles:  txt</p id=formatCompatible>
+        </p>
+    </form>
+{% endblock %}

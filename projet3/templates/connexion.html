@@ -1,0 +1,19 @@
+{# Fichier templates/connexion.html #}
+{% extends "base.html" %}
+
+{% block contenu %}
+
+<h1 id="FormulaireTitre">Connexion</h1>
+    <form action="/connexion" method="POST">
+        <p>
+            <input type="text" name="pseudonyme" id="pseudonyme" placeholder="Identifiant" required>
+        </p>
+        <p>
+            <input type="password" name="mot_de_passe" id="mot_de_passe" placeholder="Mot de passe" required>
+        </p>
+        <p>
+            <input type="submit" value="Se connecter" class="inscriptionConfirmer">
+        </p>
+    </form>
+
+{% endblock %}

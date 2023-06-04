@@ -1,0 +1,50 @@
+{# Fichier templates/galerie.html #}
+{% extends "base.html" %}
+{% block contenu %}
+<section class="sectionImage">
+<br>
+<h2>Images & Gifs</h2>
+<br>
+{% for dictionnaire_image in dictionnaires_images %}
+
+            <a href="{{ url_for('affiche_page_image', nom_image=dictionnaire_image['nom']) }}">
+                <img src="{{ url_for('affiche_image', nom_image=dictionnaire_image['nom']) }}" class="imageListe" alt="{{ dictionnaire_image['nom'] }}">
+       </a>
+{% endfor %}
+<br>
+    <br>
+    <h2>Videos</h2>
+    <br>
+    <br>
+{% for dictionnaire_image in dictionnaires_videos %}
+
+            <a href="{{ url_for('affiche_page_image', nom_image=dictionnaire_image['nom']) }}">
+                <video controls class="videoListe">
+
+                    <source src="{{ url_for('affiche_image',nom_image=dictionnaire_image['nom'], titre=titre ) }} "
+                            type="video/mp4">
+                
+                    Format vidéo non compatible
+                </video>
+       </a>
+{% endfor %}
+<br><br>
+<h2>Audios</h2>
+<br>
+<br>
+{% for dictionnaire_image in dictionnaires_audios %}
+
+        <a href="{{ url_for('affiche_page_image', nom_image=dictionnaire_image['nom']) }}" class="lienAudio">
+            <div class="blocAudio" >  
+            <audio controls class="audioListe">
+                <source src="{{ url_for('affiche_image', nom_image=dictionnaire_image['nom'], titre=titre) }}" type="audio/mp3" >
+              Your browser does not support the audio element.
+              </audio>
+              <br>
+        </div>
+   </a>
+
+<br><br>
+{% endfor %}
+</section>
+{% endblock %}

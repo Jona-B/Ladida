@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block contenu %}
+    <form action="{{ url_for('modifie_message', id=id, nom_image = nom_image) }}"  method="POST" >
+        <p>
+            <textarea cols="50" rows="5" name="contenu" id="blocDetailCom" required>{{ commentaire[0] }}</textarea>
+        </p>
+            <input type="hidden" name="auteur" id="auteur" value="{{ commentaire[1] }}" >
+
+            <input type="hidden" name="date_publication" id="date" value="{{ commentaire[2].strftime('%d/%m/%Y %H:%M:%S') }}" >
+        <p>
+            <input type="submit" value="Modifier" class="inscriptionConfirmer">
+        </p>
+    </form>
+{% endblock %}

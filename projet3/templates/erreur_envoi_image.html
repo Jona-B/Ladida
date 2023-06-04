@@ -1,0 +1,11 @@
+{# Fichier templates/erreur_envoi_image.html #}
+{% extends "base.html" %}
+{% block contenu %}
+<div class="sectionImage">
+    <br>
+    <p>Erreur lors de l'envoi.</p>
+    <p>
+        <a href="{{ url_for('affiche_formulaire_envoi_image') }}" class="inscriptionConfirmer">Retour au formulaire d'envoi d'image</a>
+    </p>
+</div>
+{% endblock %}

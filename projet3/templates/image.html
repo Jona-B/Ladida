@@ -1,0 +1,50 @@
+{# Fichier templates/image.html #}
+{% extends "base.html" %}
+{% block contenu %}
+<div id="blocImage">
+    <span id="titreImage">{{ titre.capitalize() }}</span>
+    <br><br>
+    <span id="datePublication">par <a href="{{ url_for('affiche_image_createur' , createur=createur) }}" class="nomCreateur">{{ createur.capitalize() }}
+    </a> {{ date_mise_en_ligne.strftime('le %d/%m/%Y à %H:%M:%S') }}</span>
+    <img src="{{ url_for('affiche_image', nom_image=nom_image, titre=titre) }}" alt="{{ nom_image }}" id="imageGrand">
+    {% if session['pseudonyme']  == createur %}
+    <a href="{{ url_for('supprimer_image_createur', nom_image=nom_image) }}" id="supprimer">Supprimer</a>
+    <br>
+    {% else %}
+    {% endif %} 
+  
+
+</div>
+<!-- Espace commentaire -->
+<br>
+<h4 id="commentaireTitre">Commentaires</h4>
+
+{% if 'pseudonyme' in session %}
+<form action="{{ url_for('recupere_message') }}" method="POST">
+    <p>
+        <textarea name="contenu" id="message" rows="5" cols="50" placeholder="Laissez un avis !" required></textarea>
+    </p>
+      <input type="hidden" name="auteur" id="pseudo"  value="{{ session['pseudonyme'] }}" >
+      <input type="hidden" name="nom_image" id="nom_image"  value="{{nom_image}}" >
+    <p>
+        <input type="submit" value="Commenter" class="inscriptionConfirmer" >
+    </p>
+    <br>
+</form>
+{% else %}
+{% endif %}  
+<ul>
+    {% for commentaire in commentaires %}
+    <a href="{{ url_for('affiche_commentaire',id=commentaire[0],  nom_image=nom_image) }}" >
+      <li class="commentaireMessage"> 
+       <span class="contenuMessage"> {{ commentaire[1] }} </span>
+            <br><br> <span class="infoCom"> par {{ commentaire[2] }} le {{ commentaire[3].strftime('le %d/%m/%Y à %H:%M:%S') }}  </span> 
+        </li>
+        </a>
+        {% if session['pseudonyme']  == auteur %}
+        {% else %}
+        {% endif %} 
+    {% endfor %}
+    </ul>
+    
+    {% endblock %}

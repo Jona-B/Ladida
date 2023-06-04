@@ -1,0 +1,452 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+@media (max-width: 750px){  /* Ecran Telephone & Tablette */
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    position: relative;
+}
+
+#botPage{  
+    padding-top: 160px;
+}
+
+a{
+    text-decoration: none;
+}
+
+    /* footer */
+
+footer{
+    position: absolute;
+    position: fixed;
+    background-color:white;
+    display: inline-block;
+    width: 100%;
+    border-top: 1px solid #F3F4F4; 
+    padding-top: 20px;
+    bottom: 0;
+}
+
+#topPage{
+    display:none;
+}
+
+.authentificationStyle {
+    color: rgb(255, 107, 107);
+}
+
+.profil {
+    color:#383838;
+    text-align: right;
+    line-height: 25px;
+    transition: all 200ms ease;
+    float: right;
+    padding-right: 5%;
+}
+
+.authentification {
+    line-height: 25px;
+    transition: all 200ms ease;
+    float: right;
+    margin-right: 5%;
+    margin-bottom: 5%;
+}
+
+.connexion{
+    color: rgb(255, 107, 107);
+    padding:5px;
+}
+
+.inscription{
+    color:white;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(255, 107, 107);
+    transition: all 200ms ease;
+    border-radius: 30px;
+    font-size: 17px;
+    height: 27px;
+    text-align: center;
+}
+
+.shareImage{
+    color:white;
+    padding: 10px 16px;
+    background-color: rgb(255, 107, 107);
+    transition: all 200ms ease;
+    border-radius: 30px;
+    font-size: 30px;
+    font-weight: bold;
+    height: 26px;
+    text-align: center;
+    margin-left:38%;
+}
+
+.shareImage:active {
+    background-color: rgb(216, 74, 74);
+    font-size: 29px;
+}
+
+.pseudoHeader{
+    color: rgb(255, 107, 107);
+    font-weight: bold;
+}
+
+.galerieHeader {
+    color: rgb(255, 107, 107);
+    font-weight: bold;
+    font-size: 30px;
+    transition: all 200ms ease;
+    float: right;
+    padding-right: 5%;
+}
+
+.accueilHeader {
+    color: rgb(255, 107, 107);
+    font-weight: bold;
+    font-size: 30px;
+    transition: all 200ms ease;
+    padding-left: 5%;
+    
+}
+/* Affichage des images */
+
+.sectionImage{
+    
+    text-align: center;
+    color:#383838;
+}
+
+.imageListe {
+    width: 90%;
+    height:auto;
+    padding:10px;
+    margin: auto;
+    border-radius: 30px;
+}
+
+.imageListe:active {
+    filter: brightness(0.4);
+    filter: contrast(50%);
+    width: 85%;
+    height:auto;
+}
+
+.videoListe {
+    width: 90%;
+    height:auto;
+    border-radius: 30px;
+    padding:10px;
+    margin: auto;
+    outline: none;
+}
+
+.audioListe {
+    border-radius: 30px;
+    padding:10px;
+    margin: auto;
+    outline: none;
+    width: 90%;
+}
+
+.audioListe::-webkit-media-controls-play-button,
+    .audioListe::-webkit-media-controls-panel {
+    background-color: rgb(255, 107, 107);
+    }
+.lienAudio {
+    color: white;
+    outline: none;
+    font-weight: bold;
+}
+
+.blocAudio{
+    background-color:rgb(255, 107, 107);
+    width: 90%;
+    margin: auto;
+    border-radius: 100px;
+    padding:10px;
+}
+
+.videoListe:active {
+    filter: brightness(0.4);
+    filter: contrast(50%);
+    width: 85%;
+    height:auto;
+}
+
+#imageGrand {
+    height:auto ;
+    width:100%;
+    border-radius: 30px;
+    padding-top:10px;
+    border: none;
+}
+
+#videoGrand {
+    height:auto ;
+    width: 100%;
+    border-radius: 30px;
+    padding-top:10px;
+    outline: none;
+    border: transparent;
+}
+
+#datePublication {
+    text-align: center;
+}
+
+.nomCreateur{
+    color: rgb(255, 107, 107);
+}
+
+#blocImage {
+    width:90%;
+    margin: auto;
+    padding-top: 30px;
+    text-align: center;
+}
+
+#titreImage {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2em;
+    color:#383838;
+}
+
+#titreAudio {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2em;
+    color:#383838;
+}
+
+#datePublicationAudio {
+    text-align: center;
+
+}
+
+#audioGrand{
+    padding-top:20px;
+    outline: none;
+    text-align: center;
+}
+
+/* Supprimer image*/
+
+#supprimer {
+    color: white;
+    font-weight: bold;
+    display: block;
+    border: none;
+    border-radius: 30px;
+    padding: 5px 6px;
+    font-size: 15px;
+    background-color:rgb(255, 107, 107);
+    outline: none;
+    float: left;
+}
+
+#supprimer:active {
+    background-color: rgb(216, 74, 74);
+    font-size: 1px;
+}
+
+#supprimerAudio {
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    padding: 5px 6px;
+    font-size: 15px;
+    background-color:rgb(255, 107, 107);
+    outline: none;
+}
+
+#supprimerAudio:active {
+    background-color: rgb(216, 74, 74);
+}
+
+#confirmationSupprimer{
+    text-align: center;
+    padding-top: 100px;
+    color: rgb(255, 107, 107);
+    padding-bottom: 20px;
+}
+/* Formulaires*/
+
+form{
+    text-align: center;
+    margin-top: 100px;
+}
+
+/* Formulaire envoi d'image */
+#formatComptatible{
+    
+    color:#383838;
+    font-size:12px;
+    text-align: center;
+}
+
+#titre {
+    color:#383838;
+    font-size:25px;
+    border:none;
+    width:70%;
+    text-align: center;
+    outline: none;
+    border-bottom: 1px solid #999999;
+    margin-top: 50px;
+}
+
+#imageSelect::-webkit-file-upload-button {
+    visibility: hidden;
+}
+
+#imageSelect{
+    outline: none;
+    width:70%;
+    margin: auto;
+    margin-top: 100px;
+   
+}
+#imageSelect::before {
+    content: 'Importer un fichier';
+    display: block;
+    border: 1px solid #999999;
+    border-radius: 5px;
+    padding: 5px 8px;
+    font-size: 25px;
+    text-align: center;
+    margin-top:30px ;
+}
+
+#imageSelect:active:before {
+    border: 2px solid black;
+}
+
+#boutonEnvoyer {
+    color: white;
+    display: inline-block;
+    border: none;
+    border-radius: 30px;
+    padding: 5px 8px;
+    font-size: 30px;
+    background-color: rgb(255, 107, 107);
+    outline: none;
+    margin-top: 80px;
+}
+
+#boutonEnvoyer:active {
+    background-color: rgb(216, 74, 74);
+    font-size: 29px;
+}
+
+/* Inscription & Connexion */
+
+#pseudonyme {
+    font-size:25px;
+    border:none;
+    width:70%;
+    text-align: center;
+    outline: none;
+    border-bottom: 1px solid #999999;
+    color:#383838; margin-top: 100px;
+}
+
+#mot_de_passe{ 
+    font-size:25px;
+    border:none;
+    width:70%;
+    text-align: center;
+    outline: none;
+    border-bottom: 1px solid #999999;
+    color:#383838;
+    margin-top: 50px;
+}
+
+#FormulaireTitre{
+    text-align: center;
+    color: rgb(255, 107, 107);
+    padding-top: 50px;
+}
+
+.inscriptionConfirmer {
+    color: white;
+    display: inline-block;
+    border: none;
+    border-radius: 30px;
+    padding: 5px 13px;
+    font-size: 30px;
+    background-color: rgb(255, 107, 107);
+    outline: none;
+    margin-top: 30px;
+}
+
+
+#inscriptionConfirmer:active {
+    background-color: rgb(216, 74, 74);
+}
+
+/* Commentaires */
+
+#commentaireTitre{
+    text-align: center;
+    font-size: 2em;
+    color:#383838;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+#message {
+    border: 1px solid #999999;
+    border-radius: 10px;
+    width: 85%;
+    height:120px;
+    outline: none;
+    padding: 10px 10px;
+    font-size: 16px;
+    color:#383838;
+    margin-top: -80px;
+
+}
+
+.commentaireMessage {
+    color:#383838;
+    font-size: 16px;
+    list-style: none;
+    border: 1px solid #999999;
+    border-radius: 10px; 
+    padding: 15px;
+    width: 85%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.infoCom {
+    font-size: 12px;
+}
+
+#blocDetailCom {
+    margin: auto;
+    margin-top: 150px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid #999999;
+    border-radius: 10px;
+    width: 85%;
+    outline: none;
+    padding: 10px 10px;
+    font-size: 16px;
+    color:#383838;
+}
+
+#buttonSupCom {
+    margin: 0px;
+}
+}

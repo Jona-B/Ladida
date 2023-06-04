@@ -1,0 +1,455 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+@media (min-width: 751px){ /*Ecran de PC*/
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+ #botPage {
+    display: none;
+ }
+ a{
+    text-decoration: none;
+ }
+/* header */
+header{
+    position: absolute;
+    position: fixed;
+    background-color:white;
+    display: inline-block;
+    width: 100%;
+    height: 100px;
+    border-bottom: 1px solid #F3F4F4; 
+    top: 0px;
+    z-index: 10;
+}
+#logo {
+    position: absolute;
+    left: 10px;
+    padding-left: 10px;
+    height:100px;
+}
+.authentificationStyle {
+    color: rgb(255, 107, 107);
+}
+.profil {
+    color:#383838;
+    float: right;
+    text-align: right;
+    padding-right: 20px;
+    line-height: 25px;
+    transition: all 200ms ease;
+   
+}
+.authentification {
+    float: right;
+    text-align: right;
+    padding-right: 20px;
+    line-height: 25px;
+    transition: all 200ms ease;
+}
+.connexion{
+    color: rgb(255, 107, 107);
+    padding:5px;
+}
+.inscription{
+    color:white;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(255, 107, 107);
+    transition: all 200ms ease;
+    border-radius: 30px;
+    font-size: 17px;
+    height: 27px;
+    text-align: center;
+}
+.inscription:hover{
+    background-color: rgb(255, 161, 161);
+}
+.shareImage{
+    color:white;
+    padding: 10px 16px;
+    background-color: rgb(255, 107, 107);
+    transition: all 200ms ease;
+    border-radius: 30px;
+    position: relative;
+    font-size: 20px;
+    font-weight: bold;
+    height: 26px;
+    text-align: center;
+    float:left;
+    margin-right: 10px;
+}
+.shareImage:hover{
+    background-color: rgb(255, 161, 161);
+}
+.shareImage:active {
+    background-color: rgb(216, 74, 74);
+}
+.pseudoHeader{
+    color: rgb(255, 107, 107);
+    font-weight: bold;
+}
+nav{
+    margin-top: 5px;
+}
+.galerieHeader {
+    color: rgb(255, 107, 107);
+    font-weight: bold;
+    font-size: 20px;
+    border-left: 1.5px solid #F3F4F4;
+    display: inline-block;
+    height: 35px;
+    padding-left: 6px;
+    padding-top: 5px;
+    transition: all 200ms ease;
+}
+.galerieHeader:hover{
+    color: rgb(202, 59, 59);
+}
+.accueilHeader {
+    margin-left:45.5%;
+    color: rgb(255, 107, 107);
+    font-weight: bold;
+    font-size: 20px;
+    transition: all 200ms ease;
+    padding:5px;
+ 
+}
+.accueilHeader:hover{
+    color: rgb(202, 59, 59);
+}
+
+/* Affichage fichier */
+.sectionImage{
+    margin-top: 150px;
+    text-align: center;
+    color:#383838;
+}
+
+h1 {
+    text-align: center;
+    color:#383838;
+    padding-top:30px ;
+}
+.imageListe {
+    width: auto;
+    height:300px;
+    padding:10px;
+    margin: auto;
+    border-radius: 30px;
+}
+
+.imageListe:hover {
+    filter: brightness(0.4);
+}
+.imageListe:active {
+    filter: brightness(0.4);
+    filter: contrast(50%);
+}
+.videoListe {
+    height: 300px;
+    width: auto;
+    border-radius: 30px;
+    padding:10px;
+    margin: auto;
+    outline: none;
+   
+}
+.videoListe:hover {
+    filter: brightness(0.4);
+}
+.videoListe:active {
+    filter: brightness(0.4);
+    filter: contrast(50%);
+}
+.audioListe {
+    border-radius: 30px;
+    padding:10px;
+    margin: auto;
+    outline: none;
+    width: 80%;  
+}
+.audioListe::-webkit-media-controls-play-button,
+    .audioListe::-webkit-media-controls-panel {
+    outline: none;
+}
+.blocAudio{
+    background-color:rgb(255, 107, 107);
+    width: 20%;
+    margin: auto;
+    border-radius: 100px;
+    padding:10px;
+}
+.blocAudio:hover {
+    filter: brightness(0.4);
+}
+
+#imageGrand {
+    height:auto ;
+    width:100%;
+    border-radius: 30px;
+    padding-top:10px;
+    border: none;
+}
+#videoGrand {
+    height:auto ;
+    width:100%;
+    border-radius: 30px;
+    padding-top:10px;
+    outline: none;
+    border: transparent;
+}
+#audioGrand{
+    padding-top:20px;
+    outline: none;
+    text-align: center;
+}
+/* Detail Fichier*/
+
+#datePublication {
+    float: left;
+}
+.nomCreateur{
+    color: rgb(255, 107, 107);
+}
+#blocImage {
+    width:80%;
+    margin: auto;
+    padding-top: 100px;
+    text-align: center;
+    margin-top: 30px;
+}
+#titreImage {
+    float: left;
+    font-weight: bold;
+    font-size: 2em;
+    color:#383838;
+}
+#titreAudio {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2em;
+    color:#383838;
+}
+#datePublicationAudio {
+    text-align: center;
+
+}
+
+/* Supprimer image*/
+
+#supprimer {
+    color: white;
+    font-weight: bold;
+    display: block;
+    border: none;
+    border-radius: 30px;
+    padding: 5px 6px;
+    font-size: 15px;
+    background-color:rgb(255, 107, 107);
+    outline: none;
+    float: left;
+}
+#supprimer:hover{
+    background-color: rgb(255, 161, 161);
+    cursor: pointer;
+}
+#supprimer:active {
+    background-color: rgb(216, 74, 74);
+}
+
+#supprimerAudio {
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    padding: 5px 6px;
+    font-size: 15px;
+    background-color:rgb(255, 107, 107);
+    outline: none;
+}
+#supprimerAudio:hover{
+    background-color: rgb(255, 161, 161);
+    cursor: pointer;
+}
+#supprimerAudio:active {
+    background-color: rgb(216, 74, 74);
+}
+
+#confirmationSupprimer{
+    text-align: center;
+    padding-top: 100px;
+    color: rgb(255, 107, 107);
+    padding-bottom: 20px;
+}
+/* Formulaires du site*/
+
+form{
+    text-align: center;
+    margin-top: 100px;
+}
+
+/* Formulaire envoi d'image */
+#formatComptatible{
+    color:#383838;
+    font-size:12px;
+    text-align: center;
+}
+#titre {
+    color:#383838;
+    font-size:25px;
+    border:none;
+    width:25%;
+    text-align: center;
+    outline: none;
+    border-bottom: 1px solid #999999;
+}
+#imageSelect::-webkit-file-upload-button {
+    visibility: hidden;
+}
+#imageSelect{
+    outline: none;
+   width:10%;
+   margin: auto;
+   
+}
+#imageSelect::before {
+    content: 'Importer un fichier';
+    display: block;
+    border: 1px solid #999999;
+    border-radius: 5px;
+    padding: 5px 8px;
+    font-size: 15px;
+    text-align: center;
+    margin-top:30px ;
+}
+#imageSelect:hover:before {
+    border-color: black; 
+}
+#imageSelect:active:before {
+    border: 2px solid black;
+}
+#imageSelect:hover {
+    background-color: transparent;
+}
+#boutonEnvoyer {
+    color: white;
+    display: inline-block;
+    border: none;
+    border-radius: 30px;
+    padding: 5px 8px;
+    font-size: 20px;
+    background-color: rgb(255, 107, 107);
+    outline: none;
+    margin-top:30px ;
+}
+
+#boutonEnvoyer:hover{
+    background-color: rgb(255, 161, 161);
+}
+#boutonEnvoyer:active {
+    background-color: rgb(216, 74, 74);
+}
+
+/* Inscription & Connexion */
+
+#pseudonyme {
+    font-size:25px;
+    border:none;
+    width:300px;
+    text-align: center;
+    outline: none;
+    border-bottom: 1px solid #999999;
+    color:#383838;
+}
+
+#mot_de_passe{ 
+    font-size:25px;
+    border:none;
+    width:300px;
+    text-align: center;
+    outline: none;
+    border-bottom: 1px solid #999999;
+    color:#383838;
+    margin-top: 30px;
+}
+
+#FormulaireTitre{
+    text-align: center;
+    color: rgb(255, 107, 107);
+    padding-top: 30px;
+}
+.inscriptionConfirmer {
+    color: white;
+    display: inline-block;
+    border: none;
+    border-radius: 30px;
+    padding: 5px 8px;
+    font-size: 20px;
+    background-color: rgb(255, 107, 107);
+    outline: none;
+    margin-top: 30px;
+}
+
+#inscriptionConfirmer:hover{
+    background-color: rgb(255, 161, 161);
+    cursor: pointer;
+}
+#inscriptionConfirmer:active {
+    background-color: rgb(216, 74, 74);
+}
+
+/* Commentaires */
+
+#commentaireTitre{
+    text-align: center;
+    font-size: 2em;
+    color:#383838;
+    padding: 10px;
+}
+#message {
+    border: 1px solid #999999;
+    border-radius: 10px;
+    width: 30%;
+    height: 200PX;
+    outline: none;
+    padding: 10px 10px;
+    font-size: 16px;
+    color:#383838;
+    margin-top: -70px;
+}
+.commentaireMessage {
+    color:#383838;
+    font-size: 16px;
+    list-style: none;
+    border: 1px solid #999999;
+    border-radius: 10px; 
+    padding: 15px;
+    width: 50%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.infoCom {
+    font-size: 12px;
+}
+
+#blocDetailCom {
+    margin: auto;
+    margin-top: 150px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid #999999;
+    border-radius: 10px;
+    width: 30%;
+    outline: none;
+    padding: 10px 10px;
+    font-size: 16px;
+    color:#383838;
+}
+#buttonSupCom {
+    margin: 0px;
+}
+}

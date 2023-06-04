@@ -1,0 +1,18 @@
+{# Fichier templates/inscription.html #}
+{% extends "base.html" %}
+
+{% block contenu %}
+
+<h1 id="FormulaireTitre">Inscription</h1>
+<form action="/inscription" method="POST">
+    <p>
+        <input type="text" name="pseudonyme" id="pseudonyme" placeholder="Identifiant" required>
+    </p>
+    <p>
+        <input type="password" name="mot_de_passe" id="mot_de_passe" placeholder="Mot de passe" required>
+    </p>
+    <p>
+        <input type="submit" value="S'inscrire" class="inscriptionConfirmer">
+    </p>
+</form>
+{% endblock %}

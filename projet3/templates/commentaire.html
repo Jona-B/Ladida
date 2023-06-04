@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block contenu %}
+<div id="blocDetailCom">
+    <h2>Détail du commentaire</h2>
+    <p>Auteur : {{ commentaire[1] }}</p>
+    <p>Date : {{ commentaire[2].strftime('%d/%m/%Y à %H:%M:%S') }}</p>
+    <p class="contenu-message">Contenu : {{ commentaire[0] }}</p>
+    {% if 'pseudonyme' in session %}
+    {% if session['pseudonyme']  == commentaire[1] %}
+    <a href="{{ url_for('affiche_modification_commentaire', id=id, nom_image=nom_image ) }}" class="inscriptionConfirmer">Modifier le commentaire</a>
+    <form action="{{ url_for('supprime_message', id=id, nom_image = nom_image) }}" id="buttonSupCom" method="POST">
+        <input type="submit" value="Supprimer" class="inscriptionConfirmer">
+    </form>
+    {% else %}
+    {% endif %}  
+    {% else %}
+    {% endif %}  
+    <a class="inscriptionConfirmer" href="{{ url_for('affiche_page_image', nom_image = nom_image)  }}">Retour</a>
+</div>
+{% endblock %}
